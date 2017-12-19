@@ -2,11 +2,12 @@ import sbt._
 import Keys._
 
 object FinagleWebsocket extends Build {
-  val libVersion = "6.45.0"
+  val libVersion = "17.12.0"
 
   val baseSettings = Defaults.coreDefaultSettings ++ Seq(
     libraryDependencies ++= Seq(
       "com.twitter" %% "finagle-core" % libVersion,
+      "com.twitter" %% "finagle-netty3" % libVersion,
       "org.scalatest" %% "scalatest" % "3.0.1" % Test,
       "junit" % "junit" % "4.12" % Test
     )
